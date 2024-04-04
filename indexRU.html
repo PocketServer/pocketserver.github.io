@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketServer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="description" content="Бесплатный сервер PocketMine-MP, работающий непосредственно на вашем устройстве">
+    <meta name="keywords" content="PocketServer, PocketMine-MP, PMMP, server, BetterAltay">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik+Iso&display=swap"
+        rel="stylesheet">
+    <script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!--
+    <nav>
+    <a href="index.html" class="logo">PocketServer</a>
+    <a href="index.html">Home</a>
+    <a href="https://play.google.com/store/apps/details?id=com.kpwnapps.pmmpplugins" target="_blank">Download app</a>
+    <a href="https://discord.gg/H3PpunPECh" target="_blank">Discord</a>
+  </nav>
+   -->
+
+   <div class="language-selector">
+    <button class="translate-button" id="language-button" onclick="toggleLanguageList()">
+        <img src="assets/images/ic_russian_federation_flag.png" alt="Язык">
+    </button>
+    <ul class="language-list" id="language-list" style="display: none;">
+        <li><a href="#" onclick="redirectToLanguage('index.html');"><img src="assets/images/ic_usa_flag.png" width="48px" height="48px">English</a></li>
+        <li><a href="#" onclick="redirectToLanguage('indexRU.html');"><img src="assets/images/ic_russian_federation_flag.png" alt="Russian">Русский</a></li>
+        <li><a href="#" onclick="redirectToLanguage('indexUK.html');"><img src="assets/images/ic_ukraine_flag.png" alt="Ukrainian">Українська</a></li>
+    </ul>
+</div>
+
+    <div class="container">
+
+        <h1>PocketServer</h1>
+        <p>Бесплатный сервер PocketMine-MP, работающий непосредственно на вашем устройстве</p><br>
+        <a class="light-button" href="https://play.google.com/store/apps/details?id=com.kpwnapps.pmmpplugins"
+            target="_blank">Скачать приложение</a>
+        <a class="discord-button" href="https://discord.gg/H3PpunPECh" target="_blank">Присоединяйтесь к нашему
+            Discord</a>
+
+
+        <br><br><br>
+        <hr>
+
+
+        <h2>Скриншоты:</h2>
+        <section class="screenshot-carousel">
+            <div><img src="assets/images/app_screenshot_1.jpg" alt="Screenshot 1"></div>
+            <div><img src="assets/images/app_screenshot_2.jpg" alt="Screenshot 2"></div>
+            <div><img src="assets/images/app_screenshot_3.jpg" alt="Screenshot 3"></div>
+            <div><img src="assets/images/app_screenshot_4.jpg" alt="Screenshot 4"></div>
+            <div><img src="assets/images/app_screenshot_5.jpg" alt="Screenshot 5"></div>
+            <div><img src="assets/images/app_screenshot_6.jpg" alt="Screenshot 6"></div>
+            <div><img src="assets/images/app_screenshot_7.jpg" alt="Screenshot 7"></div>
+            <div><img src="assets/images/app_screenshot_8.jpg" alt="Screenshot 8"></div>
+        </section>
+
+        <!-- 
+    <h2>Features:</h2>
+    <div class="capabilities-container">
+      <div class="feature-column">
+        <div class="feature-description">Free PocketMine-MP server directly running on your device</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">File explorer with all options. Zip, Unzip, share create and extract phar files, copy, cut delete and edit files or import and export files from your internal storage</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Download thousands of plugins to extend your server with lots of fun and new features</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Version manager to download older version</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Import your local worlds to PocketMine-MP</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Port checker</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Always latest PHP</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Auto-updater, never miss the latest PocketMine-MP updates</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Lots of settings to improve the performance of the server</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Backup and restore</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Easy to use</div>
+      </div>
+
+      <div class="feature-column">
+        <div class="feature-description">Statistics to view server performance and other useful information</div>
+      </div>
+    </div>
+-->
+
+        <h2>Часто задаваемые вопросы:</h2>
+
+        <!-- from https://sites.google.com/view/pocketserver-help/home -->
+
+        <button class="accordion" id="i-have-portforwarded-can-i-check-if-its-working">У меня есть готовая переадресация
+            портов, могу ли я проверить, работает ли она?</button>
+        <div class="panel">
+            <p>Да, на главной странице приложения нажмите кнопку «Статистика». Там есть синяя кнопка, которую вы можете
+                использовать, чтобы проверить, могут ли ваши друзья присоединиться к вашему серверу через общедоступный
+                IP-адрес.</p>
+        </div>
+
+        <button class="accordion" id="how-to-extract-a-phar-file">Как извлечь файл phar?</button>
+        <div class="panel">
+            <p>В проводнике приложения нажмите на файл .phar, и появится диалоговое окно для извлечения файла. Обратите
+                внимание, что некоторые файлы .phar не могут быть извлечены.</p>
+        </div>
+
+        <button class="accordion" id="can-i-portforward-without-router-settings">Могу ли я перенаправить порт без
+            настроек маршрутизатора</button>
+        <div class="panel">
+            <p>У вас есть 2 варианта</p>
+            <ul style="list-style-type: decimal;">
+                <li>Включите UPnP forwarding в pocketmine.yml, обновив upnp-portforwarding на true. Это работает только
+                    если ваш маршрутизатор поддерживает UPnP.</li>
+                <li>Создайте учетную запись на portmap.io и настройте конфигурацию для использования с OpenVPN. Это
+                    более сложно, но не требует изменений. Обратите внимание, что этот вариант не позволяет настраивать
+                    пользовательские порты без оплаты.</li>
+            </ul>
+            <p>Вы можете посмотреть учебное пособие здесь, это довольно просто: <a
+                    href="https://www.youtube.com/watch?v=yIuwIyt_J6U"
+                    target="_blank">https://www.youtube.com/watch?v=yIuwIyt_J6U</a>.</p>
+        </div>
+
+        <button class="accordion" id="can-i-use-custom-php-version-with-this-app">Могу ли я использовать собственную
+            версию PHP с этим приложением?</button>
+        <div class="panel">
+            <p>Нет, к сожалению, вы не можете. Из-за ограничений API Android нам не удается реализовать функцию импорта
+                пользовательских бинарных файлов PHP в приложение.</p>
+            <p>Однако мы всегда стараемся обновлять приложение как можно быстрее, если есть новые требования PHP.</p>
+            <p>Если вам нужна пользовательская версия приложения PocketServer с пользовательскими расширениями PHP,
+                напишите нам в Discord, и мы создадим для вас специальную версию приложения с другими бинарными файлами
+                PHP бесплатно.</p>
+        </div>
+
+        <button class="accordion"
+            id="when-i-tap-start-server-it-brings-be-to-the-console-and-there-is-not-text-it-is-empty">Когда я нажимаю
+            «Запустить сервер», переходит в консоль, а текста нет/пусто.</button>
+        <div class="panel">
+            <p>Ваше устройство 32-разрядное и не поддерживается. Мы не можем это исправить.</p>
+        </div>
+
+        <button class="accordion" id="how-can-i-improve-the-performance-of-my-server">Как я могу улучшить
+            производительность своего сервера?</button>
+        <div class="panel">
+            <p>Поскольку этот сервер работает на вашем устройстве, производительность сильно ограничена. Смартфоны и
+                планшеты не подходят для размещения серверов.</p>
+            <p>В целом, плагины, миры, аппаратное обеспечение устройства, количество игроков, конфигурация сервера будут
+                влиять на производительность сервера. Не ждите от Intel I11 такой же производительности процессора.
+                Сервер не запущен на компьютере.</p>
+        </div>
+
+        <button class="accordion" id="can-this-app-run-a-server-for-java-edition">Может ли через это приложение
+            запустить сервер для Java Edition?</button>
+        <div class="panel">
+            <p>Нет. Это приложение поддерживает сервер только для Bedrock и Windows Edition.</p>
+        </div>
+
+        <!--
+        <button class="accordion" id="can-i-use-omlet-arcade-with-this-server">Can i use Omlet Arcade with this server?</button>
+        <div class="panel">
+          <p>Omlet arcade will cause issues with the server.</p>
+        </div>
+        -->
+
+        <button class="accordion" id="why-is-my-server-so-laggy">Почему мой сервер так тормозит?</button>
+        <div class="panel">
+            <p>Это приложение <b>не является игровым сервером</b>. <b>Сервер запускается на вашем устройстве</b>.
+                Поэтому не ожидайте производительности, как от игровых ПК или высокопроизводительных серверов.</p>
+        </div>
+
+        <button class="accordion" id="how-can-i-change-ip-address">Как я могу изменить IP-адрес?</button>
+        <div class="panel">
+            <p>Это приложение <b>НЕ</b> является игровым сервером. Нет <b>ни одной причины или преимущества</b> в изменении IP-адресов для локального сервера. Если у вас есть облачный сервер, вы можете использовать провайдера, такого как No-IP.</p>
+        </div>
+    
+        <button class="accordion" id="how-can-i-change-the-name-of-the-server">Как я могу изменить имя сервера?</button>
+        <div class="panel">
+            <p>Перейдите в файлы -> откройте файл <b>server.properties</b> и отредактируйте значение motd.</p>
+        </div>
+    
+        <button class="accordion" id="i-have-my-own-server-software-can-you-add-it-on-your-app">У меня есть собственное серверное программное обеспечение, можете ли вы добавить его в свое приложение?</button>
+        <div class="panel">
+            <p>Мы будем рады добавить ваше серверное программное обеспечение в наше приложение. Свяжитесь с нами по электронной почте или присоединитесь к нам в Discord.</p>
+        </div>
+    
+        <button class="accordion" id="how-do-i-get-admin-op-on-my-server">Как мне получить администратора/ОП на моем сервере?</button>
+        <div class="panel">
+            <p>Чтобы быть администратором на вашем сервере, откройте приложение -> Консоль и выполните команду: <u>op ВашеИгровоеИмя</u></p>
+            <p>Замените ВашеИгровоеИмя на ваше фактическое имя пользователя.</p>
+            <p>Если ваше имя пользователя содержит пробелы, например "Gamer Pro", то заключите ваше имя в " ". например: op "Gamer Pro"</p>
+        </div>    
+
+        <button class="accordion" id="why-are-there-no-mobs-and-some-items-are-missing">Почему отсутствуют мобы, и
+            некоторые предметы отсутствуют</button>
+        <div class="panel">
+            <p>Серверное ПО внутри приложения не предназначено для использования в качестве обычного сервера. Мобы и
+                некоторые предметы не поддерживаются. Мы не можем "исправить" это.</p>
+        </div>
+
+        <button class="accordion" id="server-does-not-start">Сервер не запускается</button>
+        <div class="panel">
+            <ul style="list-style-type: decimal;">
+                <li>Некоторые плагины могут вызывать выключение сервера при его запуске. Пожалуйста, удалите все ваши
+                    плагины и попробуйте запустить сервер снова.</li>
+                <p>Если у вас возникли проблемы с плагином, пожалуйста, свяжитесь с разработчиком плагина.</p>
+                <p>Плагины, доступные в этом приложении, созданы сторонними разработчиками, которые не связаны с нами.
+                </p>
+                <li>Ваше устройство имеет процессор 32 бита. Программное обеспечение сервера, используемое в этом
+                    приложении, не поддерживает устройства 32 бита. Мы не можем изменить это.</li>
+                <li>Проверьте измененные файлы. Неправильное изменение определенных файлов может привести к выключению
+                    сервера.</li>
+                <li>Всегда используйте последние альфа-версии. Старые версии не поддерживаются и могут вызывать
+                    внутренние проблемы.</li>
+            </ul>
+        </div>
+
+        <button class="accordion" id="my-server-is-automatically-stopping-when-the-app-is-in-background">Мой сервер
+            автоматически останавливается, когда приложение находится в фоновом режиме</button>
+        <div class="panel">
+            <p>Если вы хотите, чтобы сервер работал в фоновом режиме, пожалуйста, отключите оптимизацию батареи для
+                этого приложения. При открытии и запуске сервера приложение запросит у вас отключение этой функции.</p>
+        </div>
+
+        <button class="accordion" id="how-can-i-fix-login-timeout">Как я могу исправить 'Таймаут входа'?</button>
+        <div class="panel">
+            <p>Пожалуйста, используйте стандартный скин и попробуйте войти снова.</p>
+        </div>
+
+        <button class="accordion" id="can-i-publish-my-own-plugin-in-your-app">Могу ли я опубликовать свой собственный
+            плагин в вашем приложении?</button>
+        <div class="panel">
+            <p>Если вы опубликуете свой плагин на poggit, он автоматически станет доступным в приложении. Однако мы
+                предоставляем вам возможность опубликовать свой собственный плагин в нашем приложении. Просто свяжитесь
+                с нами по электронной почте или в Discord.</p>
+        </div>
+
+        <button class="accordion" id="please-add-support-for-1.1.5">Пожалуйста, добавьте поддержку для 1.1.5</button>
+        <div class="panel">
+            <p>1.1.5 была удалена из приложения давно. Она была удалена, потому что для нее требовались дополнительные
+                бинарные файлы PHP, что увеличило бы размер приложения на 50%, и не все используют 1.1.5.</p>
+            <p>Было много жалоб на то, что что-то не работает, что заставило нас принять решение о удалении этой версии.
+            </p>
+        </div>
+
+        <button class="accordion" id="why-is-the-app-crashing">Почему приложение вылетает?</button>
+        <div class="panel">
+            <p>Если приложение вылетает, пожалуйста, отправьте нам снимок экрана или видео, показывающее вызов краша.
+                Также укажите некоторые детали о вашем устройстве и свяжитесь с нами в Discord или по электронной почте.
+            </p>
+            <p>Почта: <a href="mailto:thedestroyermcpe@gmail.com">thedestroyermcpe@gmail.com</a></p>
+        </div>
+
+        <button class="accordion" id="add-support-for-32-bit-devices">Пожалуйста, добавьте поддержку для устройств 32
+            бит</button>
+        <div class="panel">
+            <p>Мы не можем добавить поддержку для устройств 32 бит. Пожалуйста, рассмотрите возможность покупки нового
+                устройства.</p>
+        </div>
+
+        <button class="accordion" id="there-are-many-ads-can-you-remove-ads">Много рекламы, можете удалить рекламу,
+            пожалуйста?</button>
+        <div class="panel">
+            <p>Пока что мы не можем удалить рекламу. Мы вложили много работы в это приложение и предоставляем его
+                бесплатно для всех. Мы продолжаем искать способы обеспечить оптимальный пользовательский опыт, снижая
+                количество рекламы.</p>
+        </div>
+
+        <button class="accordion" id="plugin-does-not-work-can-you-fix-it">Тот или иной плагин не работает, можете
+            исправить?</button>
+        <div class="panel">
+            <p>Нет, мы не можем исправить проблемы, связанные с плагинами, так как они не созданы нами. Пожалуйста,
+                обратитесь к разработчику плагина за любыми вопросами или проблемами.</p>
+        </div>
+
+        <button class="accordion" id="what-can-i-use-this-app-for">Для чего я могу использовать это приложение?</button>
+        <div class="panel">
+            <p>Вы можете использовать это приложение для разработки и отладки плагинов на вашем устройстве, тестирования
+                различных компонентов сервера или для разработки миров для вашего продакшн-сервера.</p>
+        </div>
+
+        <button class="accordion" id="im-trying-to-invite-my-friends-but-they-cannot-join">Я пытаюсь пригласить своих
+            друзей, но они не могут присоединиться</button>
+        <div class="panel">
+            <p>Мы не рекомендуем использовать это приложение для хостинга сервера для игр. Вместо этого используйте
+                облачные сервисы. Если вы все еще хотите, чтобы другие люди присоединились к вашему серверу с другой
+                сети, вам необходимо настроить переадресацию портов. Этот шаг нельзя объяснить здесь, так как для каждой
+                сети способ настройки будет разным.</p>
+            <p>Вы можете найти хорошо объясненное руководство по следующей ссылке: <a href="https://portforward.com"
+                    target="_blank">https://portforward.com</a></p>
+        </div>
+
+        <button class="accordion" id="why-are-there-2-different-ips-of-my-server-what-are-these">Почему у моего сервера
+            два разных IP-адреса? Что это такое?</button>
+        <div class="panel">
+            <p>В IPv4-сети есть локальный и публичный IP-адреса.</p>
+            <p>Локальный IP-адрес предназначен для идентификации вашего устройства в локальной сети и не может быть
+                использован для доступа в Интернет. Используйте локальный IP-адрес для подключения к вашему серверу.</p>
+            <p>Публичный IP-адрес может быть доступен через Интернет. Используйте его, чтобы пригласить других людей вне
+                вашей сети. (Сначала требуется настройка переадресации портов)</p>
+            <p>Вы не обязаны использовать эти IP-адреса для подключения к вашему серверу. Сервер будет автоматически
+                отображен во вкладке "друзья" в игре.</p>
+            <p>Эти IP-адреса предназначены для использования в разработке или тестировании.</p>
+        </div>
+
+        <button class="accordion" id="can-i-be-staff-on-the-discord-server">Могу ли я быть персоналом на сервере
+            Discord?</button>
+        <div class="panel">
+            <p>Нет.</p>
+        </div>
+
+        <button class="accordion" id="why-are-you-copying-pocketmine-mp-app">Почему вы копируете приложение
+            PocketMine-MP?</button>
+        <div class="panel">
+            <p>Это приложение не является копией приложения PocketMine-MP. Все приложения, включая наше, которые
+                запускают сервер PocketMine-MP, являются неофициальными приложениями. Они не поддерживаются
+                разработчиком PocketMine-MP.</p>
+            <p>PocketMine-MP также не является приложением, это серверное программное обеспечение, которое позволяет
+                запускать сервер для игры. Если вы не понимаете, не используйте это приложение.</p>
+            <p>Кроме того, большинство функций внутри PocketServer были добавлены до того, как другое приложение
+                реализовало их.</p>
+            <p>Дополнительная информация: <a href="https://github.com/pmmp/PocketMine-MP/blob/stable/LICENSE"
+                    target="_blank">https://github.com/pmmp/PocketMine-MP/blob/stable/LICENSE</a></p>
+        </div>
+
+        <button class="accordion" id="how-can-i-move-all-files-outside-the-app">Как я могу переместить все файлы за
+            пределы приложения?</button>
+        <div class="panel">
+            <p>Начиная с Android 11, приложения больше не имеют доступа к местоположению /sdcard и могут модифицировать
+                только файлы в своих собственных каталогах. Тем не менее, вы можете легко импортировать и экспортировать
+                ваши файлы внутри приложения.</p>
+            <ul>
+                <li>Выберите файлы, которые вы хотите экспортировать.</li>
+                <li>Если у вас есть несколько файлов и вы не хотите экспортировать каждый файл вручную, создайте архив
+                    выбранных файлов.</li>
+                <li>Долгое нажатие на созданный архивный файл и экспорт на внешний носитель.</li>
+            </ul>
+        </div>
+
+
+
+        <p>
+            <span>Если вы не можете найти ответ на ваш вопрос,</span>
+            <a href="mailto:thedestroyermcpe@gmail.com">отправьте нам электронное письмо</a>
+            <span>или присоединитесь к нам на Discord.</span>
+        </p>
+
+
+
+    </div>
+
+    <footer>
+        <b>PocketServer</b>
+        <p>
+            <span>Сайт создан</span> <b>eqozqq</b>,
+            <span>приложение создано</span> <b>Destroyer570</b>
+        </p>
+    </footer>
+
+    <!-- 
+    <script src="navscroll.js"></script> 
+  -->
+  <script src="translate.js"></script>
+    <script src="faqaccordeon.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.screenshot-carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 4,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+</body>
+
+</html>
