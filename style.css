@@ -1,439 +1,353 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #1c1b1f;
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-}
-
-/* Стили навигации */
-/* 
-.logo {
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 20px;
-  color: #ffffff;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-.logo:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-nav {
-  background-color: #2a2831;
-  display: flex;
-  align-items: center;
-  padding-left: 8px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  transform-origin: top;
-}
-
-nav.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(42, 40, 49, 0.9);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transform: translateY(0);
-}
-
-body.sticky-nav-padding {
-  padding-top: 60px;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1c1b1f;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-nav.sticky {
-  animation: fadeInDown 0.3s ease;
-}
-
-nav a {
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
-  color: #e4e1e6;
-  padding: 15px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  transition: background-color 0.2s ease;
-}
-
-nav a:hover:not(.logo) {
-  color: #e6e1e5;
-  text-decoration: none;
-  background-color: #343238;
-}
-
-nav a:hover {
-  background-color: #343238;
-}
-
-@media (max-width: 768px) {
-  nav, .logo, body.sticky-nav-padding, nav.sticky {
-    display: none;
-  }
-}
-*/
-
-/* Основа */
-
-.container {
-  padding: 36px;
-}
-
-.container p {
-  color: white;
-}
-
-footer {
-  background-color: #2a2831;
-  padding: 18px;
-}
-
-/* Компоненты */
-
-.dark-button {
-  background-color: #2a2831;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dark-button:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #343238;
-}
-
-.light-button {
-  background-color: #ffffff;
-  color: #2a2831;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.light-button:hover {
-  color: #2a2831;
-  text-decoration: none;
-  background-color: #f3f3f3;
-}
-
-.discord-button {
-  background-color: #5865F2;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.discord-button:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #7983F5;
-}
-
-.translate-button {
-  background-color: #2a2831;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 8px;
-}
-
-.translate-button:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #343238;
-}
-
-button {
-  background-color: #2a2831;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  color: #ffffff;
-  text-decoration: none;
-  background-color: #343238;
-}
-
-@media (max-width: 768px) {
-  .light-button,
-  .discord-button {
-    display: block;
-    margin-bottom: 10px;
-  }
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: white;
-}
-
-h1 {
-  font-size: 68px;
-  font-weight: 800;
-  margin-top: 0px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-a {
-  color: #b6c4ff;
-  text-decoration: none;
-  font-style: bold;
-  font-weight: 600;
-}
-
-a:hover {
-  color: #dce1ff;
-  text-decoration: underline;
-}
-
-/* FAQ аккордеон */
-
-.accordion {
-  background-color: #2a2831;
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
-  padding: 15px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: background-color 0.3s ease;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.accordion span {
-  display: flex;
-  align-items: center;
-}
-
-.active,
-.accordion:hover {
-  background-color: #343238;
-}
-
-.panel {
-  text-align: left;
-  padding: 0 15px;
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s ease-out;
-}
-
-.panel p {
-  margin-top: 0;
-  color: #ffffff;
-}
-
-.arrow {
-  transition: transform 0.3s ease-out;
-}
-
-.active .arrow {
-  transform: rotate(90deg);
-}
-
-/* Стили для линии прокрутки */
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #2a2831;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #30405e;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #44597b;
-}
-
-/* Стили для линии прокрутки в Firefox */
-* {
-  scrollbar-color: #1a1f28 #1e2530;
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Стили для выделения текста */
-::selection {
-  background-color: #ffcc00;
-  color: #000;
-}
-
-::-moz-selection {
-  background-color: #1e2530;
-  color: #000;
-}
-
-/* Screenshot Carousel */
-.screenshot-carousel {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.screenshot-carousel img {
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-/* ОПТИМИЗАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
+  /* Основа */
+  
   .container {
-    padding: 8px;
+    padding: 36px;
   }
-
+  
+  .container p {
+    color: white;
+  }
+  
+  footer {
+    background-color: #2a2831;
+    padding: 18px;
+  }
+  
+  /* Компоненты */
+  
   .dark-button {
-    font-size: 14px;
+    background-color: #2a2831;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
-
+  
+  .dark-button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #343238;
+  }
+  
   .light-button {
-    font-size: 14px;
+    background-color: #ffffff;
+    color: #2a2831;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-
-  .button {
-    font-size: 14px;
+  
+  .light-button:hover {
+    color: #2a2831;
+    text-decoration: none;
+    background-color: #f3f3f3;
   }
-
+  
+  .discord-button {
+    background-color: #5865F2;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discord-button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #7983F5;
+  }
+  
+  .translate-button {
+    background-color: #2a2831;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 8px;
+  }
+  
+  .translate-button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #343238;
+  }
+  
+  button {
+    background-color: #2a2831;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #343238;
+  }
+  
+  @media (max-width: 768px) {
+    .light-button,
+    .discord-button {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: white;
+  }
+  
   h1 {
-    font-size: 28px;
+    font-size: 68px;
     font-weight: 800;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
-
+  
   h2 {
-    font-size: 20px;
+    font-size: 48px;
     font-weight: 700;
   }
-
-  .dark-button, .light-button, .discord-button {
-    font-size: 14px;
+  
+  a {
+    color: #b6c4ff;
+    text-decoration: none;
+    font-style: bold;
+    font-weight: 600;
   }
-
+  
+  a:hover {
+    color: #dce1ff;
+    text-decoration: underline;
+  }
+  
+  /* FAQ аккордеон */
+  
+  .accordion {
+    background-color: #2a2831;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .active,
+  .accordion:hover {
+    background-color: #343238;
+  }
+  
+  .panel {
+    text-align: left;
+    padding: 0 15px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .panel p {
+    margin-top: 0;
+    color: #ffffff;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .active .arrow {
+    transform: rotate(90deg);
+  }
+  
+  /* Стили для линии прокрутки */
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #2a2831;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #30405e;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #44597b;
+  }
+  
+  /* Стили для линии прокрутки в Firefox */
+  * {
+    scrollbar-color: #1a1f28 #1e2530;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Стили для выделения текста */
+  ::selection {
+    background-color: #ffcc00;
+    color: #000;
+  }
+  
+  ::-moz-selection {
+    background-color: #1e2530;
+    color: #000;
+  }
+  
+  /* Screenshot Carousel */
   .screenshot-carousel {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
   }
-
-}
-
-.language-selector {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  margin-bottom: 16px;
-}
-
-.language-list {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 5px 0;
-}
-
-.language-list li {
-  list-style: none;
-}
-
-.language-list li a {
-  color: #2a2831;
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-.language-list li a:hover {
-  background-color: #f3f3f3;
-}
-
-@media only screen and (max-width: 600px) {
-  .language-selector + .container {
-      padding-top: 150px;
+  
+  .screenshot-carousel img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
   }
-}
+  
+  /* ОПТИМИЗАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      padding: 8px;
+    }
+  
+    .dark-button {
+      font-size: 14px;
+    }
+  
+    .light-button {
+      font-size: 14px;
+    }
+  
+    .button {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+    }
+  
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  
+    .dark-button, .light-button, .discord-button {
+      font-size: 14px;
+    }
+  
+    .screenshot-carousel {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+  }
+  
+  .language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .language-list {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+  }
+  
+  .language-list li {
+    list-style: none;
+  }
+  
+  .language-list li a {
+    color: #2a2831;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .language-list li a:hover {
+    background-color: #f3f3f3;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .language-selector + .container {
+        padding-top: 150px;
+    }
+  }

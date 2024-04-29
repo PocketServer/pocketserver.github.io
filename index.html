@@ -24,24 +24,15 @@
 </head>
 
 <body>
-
-  <!--
-    <nav>
-    <a href="index.html" class="logo">PocketServer</a>
-    <a href="index.html">Home</a>
-    <a href="https://play.google.com/store/apps/details?id=com.kpwnapps.pmmpplugins" target="_blank">Download app</a>
-    <a href="https://discord.gg/H3PpunPECh" target="_blank">Discord</a>
-  </nav>
-   -->
    
    <div class="language-selector">
     <button class="translate-button" id="language-button" onclick="toggleLanguageList()">
-        <img src="assets/images/ic_usa_flag.png" alt="Language">
+        <img src="assets/images/united-states.svg" alt="Language" width="48px" height="48px">
     </button>
     <ul class="language-list" id="language-list" style="display: none;">
-        <li><a href="#" onclick="redirectToLanguage('index.html');"><img src="assets/images/ic_usa_flag.png" width="48px" height="48px">English</a></li>
-        <li><a href="#" onclick="redirectToLanguage('indexRU.html');"><img src="assets/images/ic_russian_federation_flag.png" alt="Russian">Русский</a></li>
-        <li><a href="#" onclick="redirectToLanguage('indexUK.html');"><img src="assets/images/ic_ukraine_flag.png" alt="Ukrainian">Українська</a></li>
+        <li><a href="#" onclick="redirectToLanguage('index.html');"><img src="assets/images/united-states.svg" width="48px" height="48px">English</a></li>
+        <li><a href="#" onclick="redirectToLanguage('indexRU.html');"><img src="assets/images/russia.svg" width="48px" height="48px">Русский</a></li>
+        <li><a href="#" onclick="redirectToLanguage('indexUK.html');"><img src="assets/images/ukraine.svg" width="48px" height="48px">Українська</a></li>
     </ul>
 </div>
 
@@ -52,11 +43,9 @@
     <a class="light-button" href="https://play.google.com/store/apps/details?id=com.kpwnapps.pmmpplugins"
       target="_blank">Download app</a>
     <a class="discord-button" href="https://discord.gg/H3PpunPECh" target="_blank">Join our Discord</a>
-    
 
     <br><br><br>
     <hr>
-
 
     <h2>Screenshots:</h2>
       <section class="screenshot-carousel">
@@ -69,59 +58,6 @@
         <div><img src="assets/images/app_screenshot_7.jpg" alt="Screenshot 7"></div>
         <div><img src="assets/images/app_screenshot_8.jpg" alt="Screenshot 8"></div>
       </section>
-
-      <!-- 
-    <h2>Features:</h2>
-    <div class="capabilities-container">
-      <div class="feature-column">
-        <div class="feature-description">Free PocketMine-MP server directly running on your device</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">File explorer with all options. Zip, Unzip, share create and extract phar files, copy, cut delete and edit files or import and export files from your internal storage</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Download thousands of plugins to extend your server with lots of fun and new features</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Version manager to download older version</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Import your local worlds to PocketMine-MP</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Port checker</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Always latest PHP</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Auto-updater, never miss the latest PocketMine-MP updates</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Lots of settings to improve the performance of the server</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Backup and restore</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Easy to use</div>
-      </div>
-
-      <div class="feature-column">
-        <div class="feature-description">Statistics to view server performance and other useful information</div>
-      </div>
-    </div>
--->
 
       <h2>FAQ:</h2>
 
@@ -181,13 +117,6 @@
         <div class="panel">
           <p>No. This app will only run server for Bedrock and Windows Edition.</p>
         </div>
-
-        <!--
-        <button class="accordion" id="can-i-use-omlet-arcade-with-this-server">Can i use Omlet Arcade with this server?</button>
-        <div class="panel">
-          <p>Omlet arcade will cause issues with the server.</p>
-        </div>
-        -->
 
         <button class="accordion" id="why-is-my-server-so-laggy">Why is my server so laggy?</button>
         <div class="panel">
@@ -345,14 +274,11 @@
           </ul>
         </div>
 
-
         <p>
           <span>If you cannot find an answer to your question,</span>
           <a href="mailto:thedestroyermcpe@gmail.com">send us an email</a>
           <span>or join us on Discord.</span>
       </p>
-      
-      
 
   </div>
 
@@ -363,13 +289,6 @@
         <span>app created by</span> <b>Destroyer570</b>
     </p>
 </footer>
-
-  <!-- 
-    <script src="navscroll.js"></script> 
-  -->
-  <script src="translate.js"></script>
-    
-  <script src="faqaccordeon.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -385,6 +304,63 @@
         slidesToScroll: 1
       });
     });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+  
+    function openAccordionById(id) {
+      var accordion = document.getElementById(id);
+      if (accordion) {
+        accordion.classList.add("active");
+        var panel = accordion.nextElementSibling;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
+  
+    function updateUrl(hash) {
+      if (history.pushState) {
+        history.pushState(null, null, '#' + hash);
+      } else {
+        location.hash = '#' + hash;
+      }
+    }
+  
+    var hash = window.location.hash.substring(1);
+    if (hash !== "") {
+      openAccordionById(hash);
+    }
+  
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          updateUrl('');
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          var id = this.getAttribute('id');
+          updateUrl(id);
+        }
+      });
+    }
+  });
+  </script>
+  <script>
+    function toggleLanguageList() {
+    var languageList = document.getElementById("language-list");
+    if (languageList.style.display === "none") {
+        languageList.style.display = "block";
+    } else {
+        languageList.style.display = "none";
+    }
+}
+
+function redirectToLanguage(url) {
+    window.location.href = url;
+}
   </script>
 
 </body>
