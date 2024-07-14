@@ -369,3 +369,10 @@ body {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(134, 47, 171, 0.3);
 }
+
+.notice {
+  border: 2px #2a2831 solid;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #2e2c33;
+}
